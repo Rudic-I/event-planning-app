@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header">
+        <div class="login-signup-container">
+            <div class="nav">
+                <ul class="nav-items">
+                    <li class="signin-active"><a class="btn">Sign in</a></li>
+                    <li class="signup-inactive"><a class="btn">Sign up</a></li>
+                </ul>
+            </div><!-- Navigation -->
+            <div class="form-signin">
+                <div class="container">
+                    <label for="username">Email</label>
+                    <input id="txtEmail" type="email" placeholder="">
+
+                    <label for="password">Password</label>
+                    <input id="txtPassword" type="password" placeholder="">
+
+                    <button id="btnLogin" class=""><a class="btn-login">Log In</a></button>
+                </div>
+            </div><!-- Login Form --> 
+            <div class="form-signup">
+                <div class="container">
+                    <label for="username">Email</label>
+                    <input id="txtEmail" type="email" placeholder="">
+
+                    <label for="password">Password</label>
+                    <input id="txtPassword" type="password" placeholder="">
+
+                    <button id="btnSignUp" class=" btn-secondary">Sign Up</button>
+                </div>
+            </div><!-- Signup Forma -->
+        </div><!-- Login-signup-container (whole container) -->
+        <button id="btnLogout" class="btn-action hide">Log Out</button>
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
+    
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyC6B2OaeRDtl73YsGkYBji2sS5nS14mh58",
+        authDomain: "test-a692d.firebaseapp.com",
+        databaseURL: "https://test-a692d.firebaseio.com",
+        storageBucket: "test-a692d.appspot.com",
+        messagingSenderId: "857600012834"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+
+    <!-- Main JS -->
+    <script src="main-js.js"></script>
+</body>
+</html>
