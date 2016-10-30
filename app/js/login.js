@@ -2,31 +2,31 @@
 
 // Get elements
 
-const txtEmail = document.getElementById("txtEmail");
-const txtPassword = document.getElementById("txtPassword");
-const btnLogIn = document.getElementById("btnLogin");
-const btnSignUp = document.getElementById("btnSignUp");
-const btnLogOut = document.getElementById("btnLogout");
+var txtEmail = document.getElementById("txtEmail");
+var txtPassword = document.getElementById("txtPassword");
+var btnLogIn = document.getElementById("btnLogin");
+var btnSignUp = document.getElementById("btnSignUp");
+var btnLogOut = document.getElementById("btnLogout");
 
 // Add login event
 btnLogIn.addEventListener("click",e => {
 	// Get email and pass
-	const email = txtEmail.value;
-	const pass = txtPassword.value;
-	const auth = firebase.auth();
+	var email = txtEmail.value;
+	var pass = txtPassword.value;
+	var auth = firebase.auth();
 	// Sign in
-	const promise = auth.signInWithEmailAndPassword(email, pass);
+	var promise = auth.signInWithEmailAndPassword(email, pass);
 	promise.catch(e => console.log(e.message));
 });
 
 // Add signup event
 btnSignUp.addEventListener("click",e =>{
 	// Get email and pass
-	const email = txtEmail.value;
-	const pass = txtPassword.value;
-	const auth = firebase.auth();
+	var email = txtEmail.value;
+	var pass = txtPassword.value;
+	var auth = firebase.auth();
 	// Create user
-	const promise = auth.createUserWithEmailAndPassword(email, pass);
+	var promise = auth.createUserWithEmailAndPassword(email, pass);
 	promise.catch(e => console.log(e.message));
 });
 
